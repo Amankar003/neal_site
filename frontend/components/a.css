@@ -60,4 +60,14 @@
 .t-a .fcs{position:absolute;right:0;top:50%;transform:translateY(-52%);width:min(38%,380px);margin:0;gap:14px}
 .t-a .fc{flex:1 1 calc(50% - 7px);padding:14px 16px;box-shadow:0 6px 0 #000}.t-a .fc.loc,.t-a .fc:last-child{flex-basis:100%}.t-a .fc span{font-size:14px}
 .t-a .fc.loc{transform:rotate(1deg)}.t-a .fc:nth-child(2){transform:rotate(-2deg)}.t-a .fc:nth-child(3){transform:rotate(1.5deg)}}
-@media(prefers-reduced-motion:reduce){.t-a .lay,.t-a .scene .road,.t-a .road::before,.t-a .aura,.t-a .aw,.t-a .say{animation:none}.t-a .signs{display:none}}
+/* The driving scene is the hero, so it keeps running even when a phone has 'Reduce motion' on. Only the small bounce and bubble pop stop. */
+@media(prefers-reduced-motion:reduce){.t-a .aura,.t-a .say{animation:none}}
+
+/* phones: smaller signboards that sit lower, bubble floats above them */
+@media(max-width:899px){
+.t-a .sg{width:clamp(104px,29vw,140px)}.t-a .sg i{height:8px;width:5px}
+.t-a .sg .bd{padding:5px 6px 6px;border-width:2px;outline-width:2px}
+.t-a .sg b{font-size:clamp(13px,3.8vw,17px)}.t-a .sg span{font-size:clamp(10px,2.8vw,12px)}
+.t-a .say{bottom:calc(100% + 18px)}
+.t-a .hero{padding-top:20px}
+}
