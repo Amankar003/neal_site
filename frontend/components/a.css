@@ -1,0 +1,63 @@
+/* Theme A: highway signboard */
+.t-a{--c1:#ffd21a;--c2:#0a6e3a;--c3:#e3212b;--hd:'Bowlby One','Mukta',sans-serif;--bd:'Mukta',system-ui,sans-serif;--r:14px;--bw:3px;--shd:0 6px 0 #000;--shd-l:0 8px 0 #000;--btn-sh:0 5px 0 #000;--btn-sh-k:0 5px 0 #555;--h1:clamp(2.5rem,8.5vw,5rem);--h1-lh:1.05;--h2:clamp(1.9rem,5.5vw,3.2rem);--hero-bg:#ffd21a;--hero-fg:#000;--col-bg:#0a6e3a;--col-h:#ffd21a;--hl-bg:#ffd21a}
+.t-a .h1{text-shadow:3px 3px 0 #fff;letter-spacing:-.01em}
+.t-a .checks{display:none}
+.t-a .stats{padding-top:56px}
+.t-a .tag{font-family:var(--hd);font-size:1.1rem}
+.t-a .plan h3,.t-a .plan .pr,.t-a .prof h3,.t-a .cars h3{letter-spacing:-.01em}
+.t-a .plan h3{font-size:2.4rem}.t-a .plan .pr{font-size:3rem}
+.t-a .tint{background:#f2f2ee}
+
+
+/* ===== Hero: endless side-view drive, phone first ===== */
+.t-a{--h1:clamp(2.2rem,9.6vw,4.3rem)}
+.t-a .hero{--rd:64px;--hh:clamp(60px,12vw,110px);--cw:clamp(250px,70vw,440px);--dl:max(18px,calc(50% - 580px));position:relative;padding:26px 0 max(calc(var(--cw)*.4 + 96px),calc(var(--rd) + var(--hh) + 70px));background:linear-gradient(#ffd21a 62%,#ffe680)}
+.t-a .hg{position:relative;z-index:2;display:block}
+.t-a .also{display:none}.t-a .cta{flex-wrap:nowrap;gap:12px;margin-top:20px}.t-a .cta>div{flex:1}.t-a .cta .btn{width:100%;padding:0 8px;font-size:15.5px}
+.t-a .fcs{margin-top:16px}.t-a .fc:not(.loc){padding:7px 10px}.t-a .fc.loc>div{display:flex;flex-direction:column}
+.t-a .scene{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.t-a .sun{position:absolute;right:8%;bottom:calc(var(--rd) + 24px);width:clamp(84px,22vw,120px);aspect-ratio:1;border-radius:50%;background:#fff6bd;box-shadow:0 0 0 12px rgba(255,255,255,.35),0 0 0 26px rgba(255,255,255,.18)}
+.t-a .lay{position:absolute;left:0;right:0;background-repeat:repeat-x;animation:pan linear infinite}
+.t-a .hills{bottom:var(--rd);height:var(--hh);--tile:600px;background-size:600px 100%;animation-duration:11s}
+.t-a .trees{bottom:calc(var(--rd) - 4px);height:80px;--tile:360px;background-size:360px 80px;animation-duration:2.3s}
+@keyframes pan{to{background-position-x:calc(var(--tile)*-1)}}
+.t-a .scene .road{display:block;position:absolute;left:0;right:0;bottom:0;height:var(--rd);background:repeating-linear-gradient(90deg,#fff 0 70px,transparent 70px 140px) 0 52%/140px 6px repeat-x,#2b2b2b;border-top:4px solid #000;animation:dash .53s linear infinite}
+.t-a .road::before{content:'';position:absolute;left:0;right:0;top:-14px;height:10px;background:repeating-linear-gradient(90deg,#e3212b 0 35px,#fff 35px 70px) 0 0/140px 10px repeat-x;border-bottom:4px solid #000;animation:kerb .53s linear infinite}
+@keyframes dash{to{background-position:-140px 52%,0 0}}@keyframes kerb{to{background-position-x:-140px}}
+.t-a .vehicle{position:absolute;z-index:4;bottom:12px;width:var(--cw);left:50%;margin-left:calc(var(--cw)/-2)}
+/* real Hyundai Aura: body image + two wheel images that spin (geometry from the 620x250 cutout) */
+.t-a .aura{position:relative;width:100%;aspect-ratio:620/250;container-type:inline-size;animation:bob .6s ease-in-out infinite}
+.t-a .ab{display:block;width:100%;height:100%;user-select:none;-webkit-user-drag:none}
+.t-a .aw{position:absolute;width:13.226%;aspect-ratio:1;animation:spin .42s linear infinite;user-select:none;-webkit-user-drag:none}
+.t-a .aw.w1{left:12.823%;top:63%}.t-a .aw.w2{left:76.371%;top:63.8%}
+.t-a .vehicle::after{content:'';position:absolute;left:6%;right:4%;bottom:-3px;height:9px;border-radius:50%;background:rgba(0,0,0,.38);filter:blur(4px);z-index:-1}
+/* school decal on the rear door */
+.t-a .decal{position:absolute;left:25%;top:45.5%;display:flex;align-items:center;gap:1.2cqw;pointer-events:none}
+.t-a .decal i{display:grid;place-items:center;width:4.4cqw;height:4.4cqw;border:.35cqw solid #fff;border-radius:.6cqw;background:#e3212b;color:#fff;font:400 3.1cqw/1 var(--hd);font-style:normal}
+.t-a .decal span{display:flex;flex-direction:column;line-height:1}.t-a .decal b{font:400 3cqw/1 var(--hd);color:#ffd21a}.t-a .decal small{font:800 1.7cqw/1.2 var(--bd);color:#fff}
+/* instructor's line over the car */
+.t-a .say{position:absolute;bottom:calc(100% + 4px);left:26%;z-index:5;white-space:nowrap;background:#fff;color:#000;border:3px solid #000;border-radius:14px;padding:5px 12px;font:800 clamp(13px,3.6vw,16px)/1.25 var(--bd);box-shadow:0 4px 0 #000;transform-origin:22px 100%;animation:pop .4s cubic-bezier(.3,1.6,.5,1)}
+.t-a .say::after{content:'';position:absolute;left:18px;bottom:-11px;width:14px;height:14px;background:#fff;border:solid #000;border-width:0 3px 3px 0;transform:rotate(45deg)}
+@keyframes pop{from{opacity:0;transform:scale(.6) translateY(6px)}}
+/* milestone signs: Day 1 to Day 15 passing by the road */
+.t-a .signs{position:absolute;left:0;bottom:calc(var(--rd) + 2px);display:flex;align-items:flex-end;gap:clamp(200px,36vw,380px);width:max-content;transform:translateX(100vw);animation:signs 34s linear infinite}
+.t-a .sg{width:clamp(120px,32vw,158px);display:flex;flex-direction:column;align-items:center}
+.t-a .sg .bd{width:100%;padding:7px 8px 8px;text-align:center;background:#000;color:#fff;border:3px solid #fff;outline:3px solid #000;border-radius:8px;box-shadow:0 0 0 3px rgba(0,0,0,.15)}
+.t-a .sg b{display:block;font:400 clamp(17px,4.6vw,22px)/1 var(--hd);text-transform:uppercase;color:#ffd21a}
+.t-a .sg span{display:block;margin-top:3px;font:800 clamp(11px,3vw,13px)/1.15 var(--bd)}
+.t-a .sg i{width:6px;height:30px;background:#2b2b2b}
+.t-a .sg.last .bd{background:#e3212b}.t-a .sg.last b{color:#fff}
+@keyframes signs{to{transform:translateX(-100%)}}
+@keyframes bob{50%{transform:translateY(-1.5px) rotate(-.2deg)}}@keyframes spin{to{transform:rotate(360deg)}}
+.t-a .fc{box-shadow:0 4px 0 #000}.t-a .fc:not(.loc){background:#fff}
+@media(min-width:600px){.t-a .scene .road,.t-a .road::before{animation-duration:.37s}.t-a .trees{animation-duration:1.6s}.t-a .hills{animation-duration:8s}}
+@media(min-width:600px){.t-a .also{display:block}.t-a .cta{flex-wrap:wrap}.t-a .cta>div{flex:none}.t-a .cta .btn{width:auto;padding:0 28px;font-size:17px}}
+@media(min-width:900px){
+.t-a{--h1:clamp(2.2rem,5.2vw,3.7rem)}
+.t-a .hero{padding-top:44px}.t-a .hg{grid-template-columns:1fr}.t-a .copy{max-width:62%}
+.t-a .vehicle{left:calc(var(--dl) + 10px);margin-left:0}
+.t-a .sun{right:calc(var(--dl) + 40px);bottom:auto;top:46px;width:300px}
+.t-a .fcs{position:absolute;right:0;top:50%;transform:translateY(-52%);width:min(38%,380px);margin:0;gap:14px}
+.t-a .fc{flex:1 1 calc(50% - 7px);padding:14px 16px;box-shadow:0 6px 0 #000}.t-a .fc.loc,.t-a .fc:last-child{flex-basis:100%}.t-a .fc span{font-size:14px}
+.t-a .fc.loc{transform:rotate(1deg)}.t-a .fc:nth-child(2){transform:rotate(-2deg)}.t-a .fc:nth-child(3){transform:rotate(1.5deg)}}
+@media(prefers-reduced-motion:reduce){.t-a .lay,.t-a .scene .road,.t-a .road::before,.t-a .aura,.t-a .aw,.t-a .say{animation:none}.t-a .signs{display:none}}
